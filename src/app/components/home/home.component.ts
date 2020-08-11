@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { AuthenticationserviceService }  from '../../services/authenticationservice.service';
+import { DataService }  from '../../services/data.service';
+
+import { Single } from '../../models/single';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +12,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  singles:Single [];
+  single: Single;
+
+  constructor(public http: HttpClient, public authService: AuthenticationserviceService, public dataService: DataService) {
+
+    this.dataService.requestResponse();
+    this.single = this.dataService.single;
+    
+    
+    
+   }
+
+   
+  
+  
+  
 
   ngOnInit(): void {
+    
   }
 
 }

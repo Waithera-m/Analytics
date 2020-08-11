@@ -39,9 +39,7 @@ export class AuthenticationserviceService {
 
   getAuthorizationToken() {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log(currentUser.access_token)
-    console.log('here')
-    return currentUser;
+    return currentUser.access_token;
   }
 
   logout(){
