@@ -1,12 +1,11 @@
-<div class="container mt-4">
+<div class="container align-items-center mt-3">
     <div class="col-sm-12">
-        <h3 class="text-center mb-3 display-4">Welcome to Lorem</h3>
         <div class="row mt-4">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <div class="card rounded shadow">
+                <div class="card rounded shadow shadow-lg mb-4 mt-4">
                     <div class="card-title text-center mt-3">
-                        <h3 class="display-6">Login</h3>
+                        <h3>Welcome to Lorem<br>Login</h3>
                     </div>
                     <div class="card-body">
                         <form [formGroup]='loginForm' (ngSubmit)='onSubmit()'>
@@ -43,7 +42,13 @@
                 <h1>{{error.errorTitle}}</h1>
                 <h3>{{error.errorDesc}}</h3>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-3" style="margin-bottom: 60px;"></div>
         </div>
     </div>
 </div>
+<nav class="navbar fixed-bottom navbar-dark bg-info">
+    <a class="navbar-brand" href="#">Lorem</a>
+    <div class="navbar navbar-right">
+        <p class="navbar-item" style="color: white;">Waithera-m</p>
+    </div>
+</nav>
