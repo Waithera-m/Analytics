@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "analytics-546f8": {
+      "hosting": {
+        "Interview": [
+          "analytics-546f8"
+        ]
+      }
+    }
+  }
+}

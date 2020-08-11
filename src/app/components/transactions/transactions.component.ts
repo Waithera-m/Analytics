@@ -35,7 +35,7 @@ export class TransactionsComponent implements OnInit {
     let headerOptions = new HttpHeaders().set('Authorization', authorizationData);
     this.http.get<any>(url, { headers: headerOptions }).subscribe(data => {
       this.single = data;
-      console.log(this.single[0]['transactions']);
+      
       function countProperties (obj) {
         var count = 0;
     
