@@ -1,15 +1,37 @@
 <div class="container mt-5">
-    <div class="col-sm-10 offset-sm-1">
-        <div class="chart-wrapper">
-            <canvas baseChart
-                [datasets]="this.lineChartData" 
-                [labels]="this.lineChartLabels" 
-                [options]="this.lineChartOptions"
-                [colors]="this.lineChartColors" 
-                [legend]="this.lineChartLegend" 
-                [chartType]="this.lineChartType" 
-                [plugins]="this.lineChartPlugins">
-            </canvas>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="container mb-5">
+                <button class="btn btn-dark btn-md mr-3" style="box-shadow: 3px 3px 6px rgb(44, 148, 218);" routerLink="customers">Customers</button>
+                <button class="btn btn-dark btn-md mr-3" style="box-shadow: 3px 3px 6px rgb(44, 148, 218);" routerLink="revenue">Revenue</button>
+                <button class="btn btn-dark btn-md" style="box-shadow: 3px 3px 6px rgb(44, 148, 218);" routerLink="transactions">Transactions</button>
+            </div>
+            <div class="chart-wrapper">
+                <canvas baseChart
+                    [datasets]="this.lineChartData" 
+                    [labels]="this.lineChartLabels" 
+                    [options]="this.lineChartOptions"
+                    [colors]="this.lineChartColors" 
+                    [legend]="this.lineChartLegend" 
+                    [chartType]="this.lineChartType" 
+                    [plugins]="this.lineChartPlugins">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="col-md-2">
+                <div class="dropdown">
+                    <button class="btn btn-dark btn-md dropdown-toggle" style="box-shadow: 3px 3px 6px rgb(44, 148, 218);" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Span
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+            </div>
         </div>
     </div>
 </div>

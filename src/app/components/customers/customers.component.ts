@@ -5,6 +5,7 @@ import { Single } from '../../models/single';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthenticationserviceService } from '../../services/authenticationservice.service';
 import { DataService } from '../../services/data.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-customers',
@@ -30,7 +31,7 @@ export class CustomersComponent implements OnInit {
   ngOnInit(): void {
     let authorization = this.authService.getAuthorizationToken();
     let authorizationData = 'Bearer ' + authorization;
-    let url = 'https://api.demo.reja.ai/analytics/summary?client_id=3&span=30days';
+    let url = `${environment.thirtyUrl}`;
     let headerOptions = new HttpHeaders().set('Authorization', authorizationData);
     this.http.get<any>(url, { headers: headerOptions }).subscribe(data => {
       this.single = data;
