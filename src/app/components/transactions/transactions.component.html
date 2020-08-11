@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div class="col-sm-10 offset-sm-1">
+        <div class="chart-wrapper">
+            <canvas baseChart
+                [datasets]="this.lineChartData" 
+                [labels]="this.lineChartLabels" 
+                [options]="this.lineChartOptions"
+                [colors]="this.lineChartColors" 
+                [legend]="this.lineChartLegend" 
+                [chartType]="this.lineChartType" 
+                [plugins]="this.lineChartPlugins">
+            </canvas>
+        </div>
+    </div>
+</div>

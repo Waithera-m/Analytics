@@ -13,6 +13,8 @@ import { DataService } from './services/data.service';
 import { AuthenticationserviceService } from './services/authenticationservice.service';
 import { BargraphComponent } from './components/bargraph/bargraph.component';
 import { RevenueComponent } from './components/revenue/revenue.component';
+import { CustomersComponent } from './components/customers/customers.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { RevenueComponent } from './components/revenue/revenue.component';
     HomeComponent,
     NavigationComponent,
     BargraphComponent,
-    RevenueComponent
+    RevenueComponent,
+    CustomersComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule,
