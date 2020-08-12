@@ -58,7 +58,7 @@ export class AuthenticationserviceService {
 
     this.errorData = {
       errorTitle: 'Oops! Request for document failed',
-      errorDesc: 'Something bad happened. Please try again later.'
+      errorDesc: 'Something bad happened. Please check your credentials and try again.'
     };
     return throwError(this.errorData);
   }

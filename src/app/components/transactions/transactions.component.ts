@@ -22,6 +22,9 @@ export class TransactionsComponent implements OnInit {
   lineChartLegend: boolean;
   lineChartType: string;
   lineChartPlugins;
+  sumTransactions;
+  sumCustomers;
+  sumRevenue;
 
   constructor(public authService: AuthenticationserviceService, public http: HttpClient, public dataService: DataService) { 
     this.single = this.dataService.single;
@@ -56,6 +59,23 @@ export class TransactionsComponent implements OnInit {
           
       }
 
+      var revenue = [];
+      for (let i = 0; i < len; i++) {
+        revenue.push(this.single[i]['revenue']);
+        
+      }
+
+      var customers = [];
+      for (let i = 0; i < len; i++) {
+          customers.push(this.single[i]['customers']);
+          
+      }
+
+      this.sumTransactions = text.reduce(function(a,b){return a + b}, 0);
+      this.sumRevenue = revenue.reduce(function(a,b){return a + b}, 0);
+      this.sumCustomers = customers.reduce(function(a,b){return a + b}, 0);
+
+
       var label = [];
       for (let i = 0; i < len; i++) {
         label.push(this.single[i]['date']);
@@ -63,8 +83,8 @@ export class TransactionsComponent implements OnInit {
 
       var date = label;
 
-      var transactions = text;
-      this.lineChartData = [{data: transactions, label: 'Transactions'},];
+      
+      this.lineChartData = [{data: text, label: 'Transactions'},];
       console.log(this.lineChartData);
       this.lineChartLabels = date;
 

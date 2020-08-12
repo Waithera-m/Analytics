@@ -36,13 +36,20 @@
                             </div>
                         </form>
                     </div>
+                    
                 </div>
             </div>
-            <div class="service-error" *ngIf="error">
-                <h1>{{error.errorTitle}}</h1>
-                <h3>{{error.errorDesc}}</h3>
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="service-error col-sm-8" *ngIf="error">
+                    <h1>{{error.errorTitle}}</h1>
+                    <h3>{{error.errorDesc}}</h3>
+                </div>
             </div>
-            <div class="col-md-3" style="margin-bottom: 60px;"></div>
+            
+            <div class="col-md-3" style="margin-bottom: 60px;">
+                
+            </div>
         </div>
     </div>
 </div>
